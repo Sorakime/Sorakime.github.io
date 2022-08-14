@@ -1,9 +1,0 @@
-div#speed-graph .anim-scroll, div#weight-graph .anim-scroll{
-  width: 0;
-}
-.anim-scroll{
-  transition: all .75s cubic-bezier(0.5, 0, .5, 1);
-}
-div#speed-graph .anim-scroll.showed, div#weight-graph .anim-scroll.showed{
-  width: inherit;
-}

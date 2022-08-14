@@ -1,8 +1,0 @@
-ul, ol{
-  position: relative;
-  left: 25px; width: calc(100% - 25px);
-}
-hr{
-  height: 2px; background-color: #000;
-  margin: 5px 15px;
-}

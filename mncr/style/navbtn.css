@@ -1,9 +1,0 @@
-nav-btn{
-  background-image: url('../images/nav-btn.svg');
-  width: 40px; height: 40px;
-  background-size: contain;
-  cursor: grab;
-}
-nav-btn:active{
-  cursor: grabbing;
-}
