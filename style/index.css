@@ -184,3 +184,68 @@ body > div {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+@media (max-width: 800px) {
+  body > a {
+    transform: scale(50%) rotate(90deg);
+    top: 150px;
+    left: -115px;
+  }
+  #top-flex {
+    display: block;
+  }
+  #top-flex > * {
+    text-align: center;
+    height: auto;
+  }
+  #top-flex .bulk {
+    display: none;
+  }
+  #top p {
+    bottom: 15px;
+    width: 80vw;
+    text-align: center;
+  }
+  body > div:not(#top, #loading) {
+    background-size: 75%;
+    background-position: left bottom;
+  }
+  #about-content {
+    position: relative;
+    left: 0;
+    top: 150px;
+    width: 90vw;
+    transform: none;
+    margin: auto;
+  }
+  #works section {
+    display: grid;
+  }
+  #works section > * {
+    width: 100vw;
+    height: auto;
+    margin-top: 0;
+    text-align: left;
+  }
+  #works section > *:first-child {
+    margin-top: auto;
+  }
+  #photo {
+    display: grid;
+  }
+  #photo #photo-left {
+    display: none;
+  }
+  #photo #photo-right {
+    width: 100%;
+    top: 100%;
+    margin: 0;
+  }
+  #photo blockquote,
+  #photo iframe {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
