@@ -210,6 +210,9 @@ body > div {
     background-size: 75%;
     background-position: left bottom;
   }
+  #top p {
+    display: none;
+  }
   #about-content {
     position: relative;
     left: 0;
