@@ -28,9 +28,23 @@ document.head.innerHTML += `
     }
   </style>
 `;
+
 window.onload = () => {
   document.head.innerHTML += `
     <link rel="stylesheet" href="/style/common.css">
   `;
+  document.body.innerHTML += `
+    <div id="menu" class="bold">
+      <h1><a href="#">Top</h1>
+      <h1><a href="#about">About</a></h1>
+      <h1><a href="#works">Works</a></h1>
+      <h1><a href="#photo">Photo</a></h1>
+      <h1><a href="#movie">Movie</a></h1>
+    </div>
+  `;
   setTimeout(() => document.getElementById('loading').classList.add('loaded'), 250);
+}
+
+function menu() {
+  document.body.classList.toggle('menu');
 }

@@ -196,7 +196,7 @@ body > div {
   }
   #top-flex > * {
     text-align: center;
-    height: auto;
+    height: 50%;
   }
   #top-flex .bulk {
     display: none;
