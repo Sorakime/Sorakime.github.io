@@ -126,6 +126,9 @@ body > div {
   background-image: url('/image/text/Works.svg');
   height: 200vh;
 }
+.works-left p {
+  font-size: 0;
+}
 #works section,
 #photo {
   display: flex;
@@ -186,7 +189,13 @@ body > div {
 }
 
 @media (max-width: 800px) {
-  body > a {
+  body > div:not(#loading, #top) {
+    padding: 5px 15px;
+  }
+  body > div > * {
+    width: 100%;
+  }
+  body > a:first-of-type {
     transform: scale(50%) rotate(90deg);
     top: 150px;
     left: -115px;
@@ -201,7 +210,7 @@ body > div {
   #top-flex .bulk {
     display: none;
   }
-  #top p {
+  #top p:first-of-type {
     bottom: 15px;
     width: 80vw;
     text-align: center;
@@ -210,7 +219,7 @@ body > div {
     background-size: 75%;
     background-position: left bottom;
   }
-  #top p {
+  #top p:first-of-type {
     display: none;
   }
   #about-content {
