@@ -1,48 +1,27 @@
-document.head.innerHTML += `
-  <style>
-    #loading {
-      position: fixed;
-      z-index: 9999;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      font-size: 50px;
-      background-color: #fff8;
-      backdrop-filter: blur(30px);
-      -webkit-backdrop-filter: blur(30px);
-    }
-    #loading h1 {
-      font-weight: 700;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
-    #loading.loaded {
-      transition: all .5s .5s ease-in-out;
-      top: -100%;
-    }
-    #loading.loaded h1 {
-      transition: all .5s ease-in-out;
-      top: -100%;
-    }
-  </style>
-`;
-
 window.onload = () => {
   document.head.innerHTML += `
     <link rel="stylesheet" href="/style/common.css">
   `;
   document.body.innerHTML += `
     <div id="menu" class="bold">
-      <h1><a href="#">Top</h1>
-      <h1><a href="#about">About</a></h1>
-      <h1><a href="#works">Works</a></h1>
-      <h1><a href="#photo">Photo</a></h1>
-      <h1><a href="#movie">Movie</a></h1>
+      <div id="menu-links">
+        <h1><a href="/">Top</h1>
+        <h1><a href="/works">Works</a></h1>
+        <h1><a href="/links">Links</a></h1>
+        <h1><a href="/music/">Music</a></h1>
+        <h1><a href="/request">Requests</a></h1>
+      </div>
+      <div id="menu-bottom">
+        <span id="menu-logo"></span>
+        <span id="menu-contents">
+          <h1>Sorakime</h1>
+          <small>
+            <a href="https://twitter.com/Sorakime_">Twitter</a><br>
+            <a href="https://www.youtube.com/Sorakime">YouTube</a>
+          </small>
+        </span>
     </div>
   `;
-  setTimeout(() => document.getElementById('loading').classList.add('loaded'), 250);
 }
 
 function menu() {

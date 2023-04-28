@@ -1,263 +1,129 @@
-body > a:first-of-type {
-  z-index: 9900;
-  position: fixed;
-  left: -85px;
-  top: 250px;
-  display: flex;
-  transform: rotate(90deg);
-  mix-blend-mode: exclusion;
-  text-decoration: none;
-}
-#top-arrow {
-  background-color: #fff;
-  margin-top: 9px;
-  height: 2px;
-  width: 200px;
-}
-#top-arrow::before {
+body::after {
   content: '';
-  display: inline-block;
-  position: relative;
-  top: -7.5px;
-  width: 15px;
-  height: 15px;
-  border-left: 2px solid #fff;
-  border-top: 2px solid #fff;
-  transform: rotate(-45deg);
-}
-body > a p {
-  position: relative;
-  top: -5px;
-  margin-left: 10px;
-  font-size: 25px;
-  color: #fff;
+  position: fixed;
+  display: block;
+  left: -7vmin;
+  bottom: -7vmin;
+  z-index: -1;
+  width: 30vmin;
+  height: 30vmin;
+  background-image: url('/image/logo.svg');
+  background-size: contain;
 }
 
-#top {
-  overflow: hidden;
-  height: 100vh;
-  z-index: 9998;
-}
-#top-flex {
+.content {
   display: flex;
-  height: 100%;
-  width: 100%;
-}
-#top-flex > * {
-  width: 100%;
-  position: relative;
-}
-#top h1 {
-  font-size: 60px;
-  line-height: 50px;
-}
-#top-left {
-  text-align: right;
-  background-color: #d9d9d9;
-}
-#top-right {
-  background-color: #2e2e2e;
-}
-.top-text {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  transform: translateY(-50%);
-  color: #fff;
-  mix-blend-mode: exclusion;
-  padding: 4px;
-  box-sizing: border-box;
-}
-#top > p {
-  position: absolute;
-  bottom: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  mix-blend-mode: exclusion;
-}
-#top > p > a {
-  font-size: 20px;
-  color: #fff;
-  text-decoration: none;
-}
-#top a {
-  color: inherit;
-  text-decoration: none;
-}
-
-header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-body > div {
-  position: relative;
   height: 100vh;
-  overflow: hidden;
-  z-index: 5000;
-  background-color: #efefef;
-  background-position: bottom -5px left 50px;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
 }
 
-#about {
+.content > * {
   position: relative;
-  bottom: 0;
-  z-index: 5000;
-  background-color: #fff;
-  background-image: url('/image/text/About.svg');
+  width: 50vw;
 }
-#about-content {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 30%;
-  transform: translateY(-50%);
+
+.content .left {
+  z-index: 9995;
+  padding: 70px;
+  font-size: 40px;
 }
-#about-content h1 {
+
+.content .right {
+  padding-right: 70px;
+}
+
+.content .center {
+  margin: auto;
+}
+
+.left h1 {
+  font-weight: 700;
+  font-size: 70px;
+  line-height: .8rem;
+}
+
+.left h3 {
+  font-weight: 500;
   font-size: 50px;
 }
 
-#works {
-  background-image: url('/image/text/Works.svg');
-  height: 200vh;
-}
-.works-left p {
-  font-size: 0;
-}
-#works section,
-#photo {
-  display: flex;
-  height: 100vh;
-}
-#works section > *,
-#photo > * {
-  width: 50%;
-  margin-top: 200px;
-  margin-right: 4px;
-  margin-left: 4px;
-}
-.works-left,
-#photo-left {
-  text-align: right;
-  font-size: 40px;
-}
-.works-right,
-#photo-right {
-  left: 50%;
-  font-size: 25px;
-}
-.works-right p {
-  display: grid;
-  font-weight: 400;
-}
-.works-left img {
-  height: 60px;
-  margin: 10px;
-}
-.works-right a {
-  color: inherit;
-  text-decoration: none;
-  font-weight: 400;
-}
-#see-all a {
-  font-weight: 300;
-  color: #666;
+#top .left {
+  margin: auto;
+  margin-left: 3vw;
 }
 
-#photo {
-  height: auto;
-  min-height: 100vh;
-  background-image: url('/image/text/Photo.svg');
-  background-color: #f4f4f4;
+#top .left a {
+  display: block;
 }
 
-#movie {
-  background-image: url('/image/text/Movie.svg');
+#top .left h2 {
+  font-weight: 400;
+  display: inline-block;
+  position: relative;
+  transition: color ease-in-out .3s;
 }
-#movie iframe {
-  height: 50vmin;
-  aspect-ratio: 16/9;
+
+#top .left h2::before {
+  content: '';
+  display: block;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: 100%;
+  background-color: #000;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform .3s;
 }
 
-@media (max-width: 800px) {
-  body > div:not(#loading, #top) {
-    padding: 5px 15px;
-  }
-  body > div > * {
-    width: 100%;
-  }
-  body > a:first-of-type {
-    transform: scale(50%) rotate(90deg);
-    top: 150px;
-    left: -115px;
-  }
-  #top-flex {
-    display: block;
-  }
-  #top-flex > * {
-    text-align: center;
-    height: 50%;
-  }
-  #top-flex .bulk {
-    display: none;
-  }
-  #top p:first-of-type {
-    bottom: 15px;
-    width: 80vw;
-    text-align: center;
-  }
-  body > div:not(#top, #loading) {
-    background-size: 75%;
-    background-position: left bottom;
-  }
-  #top p:first-of-type {
-    display: none;
-  }
-  #about-content {
-    position: relative;
-    left: 0;
-    top: 150px;
-    width: 90vw;
-    transform: none;
-    margin: auto;
-  }
-  #works section {
-    display: grid;
-  }
-  #works section > * {
-    width: 100vw;
-    height: auto;
-    margin-top: 0;
-    text-align: left;
-  }
-  #works section > *:first-child {
-    margin-top: auto;
-  }
-  #photo {
-    display: grid;
-  }
-  #photo #photo-left {
-    display: none;
-  }
-  #photo #photo-right {
-    width: 100%;
-    top: 100%;
-    margin: 0;
-  }
-  #photo blockquote,
-  #photo iframe {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
+#top .left h2:hover {
+  color: #fff;
+}
+
+#top .left h2:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+#top .right h1 {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 40%;
+  font-size: 70px;
+  font-weight: 700;
+}
+
+#skills .charts {
+  display: flex;
+  height: 170px;
+}
+
+#skills .charts span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  height: 100%;
+  aspect-ratio: 1/1;
+  font-size: 26px;
+  font-weight: 700;
+  border-radius: 50%;
+  font-weight: 300;
+}
+
+.charts .lang-js {
+  background-image: radial-gradient(#f2f2f2 30%, transparent 30%), conic-gradient(#4b7ab1 0% 60%, #efefef 60% 100%);
+}
+
+.charts .lang-html {
+  background-image: radial-gradient(#f2f2f2 30%, transparent 30%), conic-gradient(#4b7ab1 0% 80%, #efefef 80% 100%);
+}
+
+.charts .lang-css {
+  background-image: radial-gradient(#f2f2f2 30%, transparent 30%), conic-gradient(#4b7ab1 0% 65%, #efefef 65% 100%);
 }
