@@ -1,129 +1,127 @@
-body::after {
-  content: '';
-  position: fixed;
-  display: block;
-  left: -7vmin;
-  bottom: -7vmin;
-  z-index: -1;
-  width: 30vmin;
-  height: 30vmin;
-  background-image: url('/image/logo.svg');
-  background-size: contain;
+body::before {
+  background-image: url('/img/top.jpeg');
 }
 
-.content {
-  display: flex;
+#top {
+  position: relative;
+  overflow: hidden;
+  /*margin: 50px;*/
+  width: 100vw;
   height: 100vh;
+  box-sizing: border-box;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  z-index: 15;
+  padding: 15px 20px;
+  box-shadow: 0 0 100px #0001;
 }
-
-.content > * {
-  position: relative;
-  width: 50vw;
-}
-
-.content .left {
-  z-index: 9995;
-  padding: 70px;
-  font-size: 40px;
-}
-
-.content .right {
-  padding-right: 70px;
-}
-
-.content .center {
-  margin: auto;
-}
-
-.left h1 {
-  font-weight: 700;
-  font-size: 70px;
-  line-height: .8rem;
-}
-
-.left h3 {
-  font-weight: 500;
-  font-size: 50px;
-}
-
-#top .left {
-  margin: auto;
-  margin-left: 3vw;
-}
-
-#top .left a {
-  display: block;
-}
-
-#top .left h2 {
-  font-weight: 400;
-  display: inline-block;
-  position: relative;
-  transition: color ease-in-out .3s;
-}
-
-#top .left h2::before {
-  content: '';
-  display: block;
+#top-center {
   position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: auto;
-  height: 100%;
-  background-color: #000;
-  transform: scale(0, 1);
-  transform-origin: right top;
-  transition: transform .3s;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  mix-blend-mode: difference;
+  text-align: center;
 }
 
-#top .left h2:hover {
+#about, #activities, #request {
+  margin: 50px auto;
+  padding: 5px 10px;
+  max-width: 1000px;
+}
+:is(#about, #activities, #request) :is(h1, h2,  p) {
+  color: #fff;
+  text-shadow: 0 0 15px #000;
+  text-align: justify;
+}
+#about span {
+  display: flex;
   color: #fff;
 }
-
-#top .left h2:hover::before {
-  transform-origin: left top;
-  transform: scale(1, 1);
+#about > span {
+  display: grid;
+  margin-top: 15px;
 }
-
-#top .right h1 {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 40%;
-  font-size: 70px;
-  font-weight: 700;
-}
-
-#skills .charts {
+#about > span > span {
   display: flex;
-  height: 170px;
+  background-color: #fff6;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  margin: 5px 0;
+  padding: 10px;
+  box-shadow: 0 0 10px #0005;
+}
+#about > span > span > iframe {
+  display: block;
+  aspect-ratio: 16/9;
+}
+#about > span > span > p {
+  padding-left: 10px;
+  color: #000;
+  text-shadow: none;
+}
+#about > span > span > p * {
+  display: block;
+  text-shadow: none;
 }
 
-#skills .charts span {
+#activities .flex {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: auto;
-  margin-left: auto;
+}
+#activities .flex > * {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 45%;
+  height: 400px;
+}
+#activities .flex > div > * {
+  width: 100%;
+  padding: 2px;
+  box-sizing: border-box;
+}
+#activities .flex .taller {
   height: 100%;
-  aspect-ratio: 1/1;
-  font-size: 26px;
-  font-weight: 700;
-  border-radius: 50%;
-  font-weight: 300;
+}
+#activities .flex .shorter {
+  height: 50%;
+}
+#activities .flex p {
+  margin: 2px;
+  padding: 70px 0;
+  font-size: 30px;
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+  width: calc(100% - 4px);
+  text-shadow: none;
+  box-sizing: border-box;
+}
+#activities a {
+  color: #4B7AB1;
 }
 
-.charts .lang-js {
-  background-image: radial-gradient(#f2f2f2 30%, transparent 30%), conic-gradient(#4b7ab1 0% 60%, #efefef 60% 100%);
+#request a {
+  color: #000;
+  background-color: #fff;
+  text-shadow: none;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 3px;
+  box-shadow: 0 0 15px #0005;
 }
 
-.charts .lang-html {
-  background-image: radial-gradient(#f2f2f2 30%, transparent 30%), conic-gradient(#4b7ab1 0% 80%, #efefef 80% 100%);
-}
-
-.charts .lang-css {
-  background-image: radial-gradient(#f2f2f2 30%, transparent 30%), conic-gradient(#4b7ab1 0% 65%, #efefef 65% 100%);
+@media (max-width: 560px) {
+  #about > span > span {
+    flex-direction: column;
+  }
+  #about > span > span > p {
+    padding-left: 0;
+    padding-top: 5px;
+  }
+  #activities .flex {
+    display: block;
+  }
 }
