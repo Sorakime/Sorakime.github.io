@@ -1,0 +1,25 @@
+.works {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.works a {
+  display: inline-flex;
+  aspect-ratio: 1/1;
+}
+.works img {
+  display: inline-block;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .works {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 660px) {
+  .works {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

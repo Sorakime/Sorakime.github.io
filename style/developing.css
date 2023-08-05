@@ -1,0 +1,27 @@
+body::before {
+  background-image: url('/img/top.jpg');
+}
+
+.develop {
+  width: 1000px;
+  margin: auto;
+}
+.develop a {
+  display: block;
+  position: relative;
+  margin: 30px;
+  box-shadow: 0 0 15px #fff4;
+  background-position: center;
+  background-size: cover;
+  aspect-ratio: 16/9;
+  border-radius: 5px;
+}
+#monot {
+  background-image: url('https://mncrp.github.io/image/top/monot.jpg');
+}
+#litest {
+  background-image: url('https://mncrp.github.io/image/top/litest.jpg');
+}
+#this {
+  background-image: url('/img/header.jpg');
+}

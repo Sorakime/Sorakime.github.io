@@ -52,11 +52,12 @@ footer {
 
 .page-top {
   padding-top: 100px;
-  height: 400px;
+  height: 200px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  background-color: #21354B33;
+  color: #fff;
   text-align: center;
-  text-shadow: 0 0 15px #fff;
 }
 
 nav {
@@ -70,4 +71,8 @@ nav {
   color: #21354b;
   backdrop-filter: blur(2.5px);
   -webkit-backdrop-filter: blur(2.5px);
+}
+
+nav.sticky {
+  position: sticky;
 }

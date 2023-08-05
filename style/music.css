@@ -1,0 +1,44 @@
+body::before {
+  background-image: url('/img/music.jpg');
+}
+
+h1 {
+  font-size: 40px;
+}
+h2 {
+  display: flex;
+  font-size: 30px;
+  align-items: center;
+}
+h2::after {
+  content: '';
+  border-top: 1px solid;
+  width: calc(100% - 10rem);
+  position: absolute;
+  right: 0;
+}
+a {
+  color: #4B7AB1;
+  font-weight: 400;
+}
+
+.top {
+  width: 100%;
+  aspect-ratio: 2/1;
+  min-height: 200px;
+  max-height: 550px;
+  background-size: cover;
+  background-position: center;
+  background-image: url('/img/art-header.jpg');
+  background-color: #fff;
+}
+
+.art, .phases {
+  max-width: 1000px;
+  padding: 0 10px;
+  margin: auto;
+}
+
+.art {
+  text-shadow: 0 0 10px #fff;
+}
