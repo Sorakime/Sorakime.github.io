@@ -1,3 +1,5 @@
+body {
+}
 body::before {
   background-image: url('/img/music/art/background.jpg');
   background-repeat: no-repeat;
@@ -40,6 +42,18 @@ h4 {
 }
 .top h1 {
   font-size: 60px;
+}
+.video {
+  overflow: scroll;
+  width: 100%;
+}
+.video > span {
+  display: inline-flex;
+  overflow: auto;
+  width: auto;
+}
+.video > span > iframe {
+  display: inline-block;
 }
 
 .about, .list, .video, .interview {
