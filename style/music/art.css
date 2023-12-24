@@ -56,7 +56,7 @@ h4 {
   display: inline-block;
 }
 
-.about, .list, .video, .interview {
+.about, .list, .video, .interview, .creator {
   text-align: justify;
   max-width: 1000px;
   padding: 10px;
