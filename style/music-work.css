@@ -61,3 +61,13 @@ main > div {
 .lyric p {
   font-size: 15px;
 }
+
+@media (max-width: 100vh) {
+  .top {
+    flex-direction: column;
+  }
+  .top .right {
+    margin: 0;
+    width: auto;
+  }
+}

@@ -14,14 +14,14 @@ body::before {
   z-index: 15;
   padding: 15px 20px;
   box-shadow: 0 0 100px #0001;
+  color: #fff;
+  text-shadow: 0 0 50px #000;
 }
 #top-center {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
-  mix-blend-mode: difference;
   text-align: center;
 }
 
