@@ -66,8 +66,25 @@ main > div {
   .top {
     flex-direction: column;
   }
+  .top .left {
+    margin: auto;
+  }
   .top .right {
-    margin: 0;
     width: auto;
+    text-align: center;
+  }
+  .top .right h1 {
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .video {
+    width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .top .right h1 {
+    font-size: 30px;
+    font-weight: 500;
   }
 }
