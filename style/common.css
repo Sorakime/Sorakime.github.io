@@ -42,6 +42,10 @@ p b {
   font-weight: 500;
 }
 
+strong {
+  font-weight: 600;
+}
+
 main {
   display: block;
 }
