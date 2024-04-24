@@ -80,3 +80,7 @@ nav {
 nav.sticky {
   position: sticky;
 }
+
+nav > *:hover {
+  color: #4B7AB1;
+}
