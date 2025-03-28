@@ -2,6 +2,10 @@ body::before {
   background-image: url('/img/top.jpg');
 }
 
+body {
+  overflow-x: hidden;
+}
+
 #top {
   position: relative;
   overflow: hidden;
